@@ -1,17 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Search, Filter, Grid, List } from 'lucide-react'
 import ProductCard from '@/components/ProductCard'
-import { Product } from '@/types'
+import { ProductCardData } from '@/types'
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const query = searchParams.get('q') || ''
   
-  const [products, setProducts] = useState<Product[]>([])
+  const [products, setProducts] = useState<ProductCardData[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [searchQuery, setSearchQuery] = useState(query)
@@ -54,7 +54,7 @@ export default function SearchPage() {
     switch (sortBy) {
       case 'price-asc': return a.price - b.price
       case 'price-desc': return b.price - a.price
-      case 'rating': return b.averageRating - a.averageRating
+      case 'rating': return (b.averageRating || 0) - (a.averageRating || 0)
       case 'name': return a.name.localeCompare(b.name)
       default: return 0 // relevance - оставляем как есть
     }
@@ -199,5 +199,19 @@ export default function SearchPage() {
         </>
       )}
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={
+      <div className="container-custom py-8">
+        <div className="flex items-center justify-center h-64">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600"></div>
+        </div>
+      </div>
+    }>
+      <SearchContent />
+    </Suspense>
   )
 } 
