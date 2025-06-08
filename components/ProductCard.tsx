@@ -7,10 +7,10 @@ import { motion } from 'framer-motion'
 import { Heart, ShoppingCart, Eye, Star } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { formatPrice } from '@/lib/utils'
-import { Product } from '@/types'
+import { ProductCardData } from '@/types'
 
 interface ProductCardProps {
-  product: Product
+  product: ProductCardData
   onAddToCart?: (productId: string) => void
   onAddToWishlist?: (productId: string) => void
   loading?: boolean

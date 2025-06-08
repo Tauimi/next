@@ -17,9 +17,10 @@ import {
 import { Button } from '@/components/ui/Button'
 import ProductCard from '@/components/ProductCard'
 import { formatDate } from '@/lib/utils'
+import { ProductCardData } from '@/types'
 
 // Mock данные для демонстрации
-const featuredProducts = [
+const featuredProducts: ProductCardData[] = [
   {
     id: '1',
     name: 'iPhone 15 Pro Max',
@@ -33,7 +34,7 @@ const featuredProducts = [
     averageRating: 4.8,
     images: [{ url: '/api/placeholder/300/300', alt: 'iPhone 15 Pro Max' }],
     category: { name: 'Смартфоны' },
-    _count: { reviews: 156 }
+    totalReviews: 156
   },
   {
     id: '2',
@@ -48,7 +49,7 @@ const featuredProducts = [
     averageRating: 4.9,
     images: [{ url: '/api/placeholder/300/300', alt: 'MacBook Air M2' }],
     category: { name: 'Ноутбуки' },
-    _count: { reviews: 89 }
+    totalReviews: 89
   },
   {
     id: '3',
@@ -63,7 +64,7 @@ const featuredProducts = [
     averageRating: 4.7,
     images: [{ url: '/api/placeholder/300/300', alt: 'Samsung QLED 65"' }],
     category: { name: 'Телевизоры' },
-    _count: { reviews: 67 }
+    totalReviews: 67
   },
   {
     id: '4',
@@ -78,7 +79,7 @@ const featuredProducts = [
     averageRating: 4.6,
     images: [{ url: '/api/placeholder/300/300', alt: 'AirPods Pro 2' }],
     category: { name: 'Аксессуары' },
-    _count: { reviews: 234 }
+    totalReviews: 234
   }
 ]
 
