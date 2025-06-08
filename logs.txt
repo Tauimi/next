@@ -1,70 +1,70 @@
-[22:52:53.592] Running build in Washington, D.C., USA (East) – iad1
-[22:52:53.593] Build machine configuration: 2 cores, 8 GB
-[22:52:53.633] Cloning github.com/Tauimi/next (Branch: main, Commit: c66e0f7)
-[22:52:53.949] Cloning completed: 315.000ms
-[22:52:55.061] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
-[22:52:55.607] Running "vercel build"
-[22:52:56.083] Vercel CLI 42.2.0
-[22:52:56.372] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
-[22:52:56.382] Installing dependencies...
-[22:52:57.766] 
-[22:52:57.767] > technomart@1.0.0 postinstall
-[22:52:57.767] > prisma generate
-[22:52:57.767] 
-[22:52:58.212] Prisma schema loaded from prisma/schema.prisma
-[22:52:59.095] 
-[22:52:59.096] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 473ms
-[22:52:59.096] 
-[22:52:59.096] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[22:52:59.096] 
-[22:52:59.097] Tip: Want to react to database changes in your app as they happen? Discover how with Pulse: https://pris.ly/tip-1-pulse
-[22:52:59.097] 
-[22:52:59.290] 
-[22:52:59.291] up to date in 3s
-[22:52:59.324] Detected Next.js version: 14.2.5
-[22:52:59.329] Running "npm run vercel-build"
-[22:52:59.557] 
-[22:52:59.560] > technomart@1.0.0 vercel-build
-[22:52:59.561] > prisma generate && next build
-[22:52:59.561] 
-[22:52:59.900] Prisma schema loaded from prisma/schema.prisma
-[22:53:00.640] 
-[22:53:00.641] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 376ms
-[22:53:00.641] 
-[22:53:00.641] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[22:53:00.641] 
-[22:53:00.641] Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
-[22:53:00.641] 
-[22:53:00.678] ┌─────────────────────────────────────────────────────────┐
-[22:53:00.678] │  Update available 5.22.0 -> 6.9.0                       │
-[22:53:00.678] │                                                         │
-[22:53:00.678] │  This is a major update - please follow the guide at    │
-[22:53:00.678] │  https://pris.ly/d/major-version-upgrade                │
-[22:53:00.679] │                                                         │
-[22:53:00.679] │  Run the following to update                            │
-[22:53:00.679] │    npm i --save-dev prisma@latest                       │
-[22:53:00.679] │    npm i @prisma/client@latest                          │
-[22:53:00.679] └─────────────────────────────────────────────────────────┘
-[22:53:01.535]   ▲ Next.js 14.2.5
-[22:53:01.536] 
-[22:53:01.595]    Creating an optimized production build ...
-[22:53:02.166]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[22:53:08.177]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[22:53:09.145]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[22:53:15.727]  ✓ Compiled successfully
-[22:53:15.728]    Linting and checking validity of types ...
-[22:53:22.600] Failed to compile.
-[22:53:22.600] 
-[22:53:22.600] ./app/api/categories/route.ts:17:9
-[22:53:22.600] Type error: Object literal may only specify known properties, and 'subcategories' does not exist in type 'CategoryInclude<DefaultArgs>'.
-[22:53:22.600] 
-[22:53:22.601] [0m [90m 15 |[39m       orderBy[33m:[39m { sortOrder[33m:[39m [32m'asc'[39m }[33m,[39m[0m
-[22:53:22.601] [0m [90m 16 |[39m       include[33m:[39m {[0m
-[22:53:22.601] [0m[31m[1m>[22m[39m[90m 17 |[39m         subcategories[33m:[39m {[0m
-[22:53:22.601] [0m [90m    |[39m         [31m[1m^[22m[39m[0m
-[22:53:22.602] [0m [90m 18 |[39m           where[33m:[39m onlyActive [33m?[39m { isActive[33m:[39m [36mtrue[39m } [33m:[39m {}[33m,[39m[0m
-[22:53:22.602] [0m [90m 19 |[39m           orderBy[33m:[39m { sortOrder[33m:[39m [32m'asc'[39m }[33m,[39m[0m
-[22:53:22.602] [0m [90m 20 |[39m           include[33m:[39m includeProducts [33m?[39m {[0m
-[22:53:22.648] Error: Command "npm run vercel-build" exited with 1
-[22:53:22.959] 
-[22:53:25.834] Exiting build container
+[23:19:40.704] Running build in Washington, D.C., USA (East) – iad1
+[23:19:40.705] Build machine configuration: 2 cores, 8 GB
+[23:19:40.722] Cloning github.com/Tauimi/next (Branch: main, Commit: 51b4cde)
+[23:19:41.148] Cloning completed: 425.000ms
+[23:19:42.927] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
+[23:19:43.455] Running "vercel build"
+[23:19:43.968] Vercel CLI 42.2.0
+[23:19:44.303] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+[23:19:44.312] Installing dependencies...
+[23:19:46.123] 
+[23:19:46.124] > technomart@1.0.0 postinstall
+[23:19:46.124] > prisma generate
+[23:19:46.124] 
+[23:19:46.574] Prisma schema loaded from prisma/schema.prisma
+[23:19:47.373] 
+[23:19:47.374] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 396ms
+[23:19:47.374] 
+[23:19:47.375] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[23:19:47.375] 
+[23:19:47.375] Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+[23:19:47.375] 
+[23:19:47.568] 
+[23:19:47.569] up to date in 3s
+[23:19:47.600] Detected Next.js version: 14.2.5
+[23:19:47.605] Running "npm run vercel-build"
+[23:19:47.722] 
+[23:19:47.722] > technomart@1.0.0 vercel-build
+[23:19:47.725] > prisma generate && next build
+[23:19:47.725] 
+[23:19:48.075] Prisma schema loaded from prisma/schema.prisma
+[23:19:48.812] 
+[23:19:48.813] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 353ms
+[23:19:48.813] 
+[23:19:48.813] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[23:19:48.814] 
+[23:19:48.814] Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
+[23:19:48.814] 
+[23:19:48.850] ┌─────────────────────────────────────────────────────────┐
+[23:19:48.851] │  Update available 5.22.0 -> 6.9.0                       │
+[23:19:48.851] │                                                         │
+[23:19:48.851] │  This is a major update - please follow the guide at    │
+[23:19:48.852] │  https://pris.ly/d/major-version-upgrade                │
+[23:19:48.852] │                                                         │
+[23:19:48.852] │  Run the following to update                            │
+[23:19:48.852] │    npm i --save-dev prisma@latest                       │
+[23:19:48.853] │    npm i @prisma/client@latest                          │
+[23:19:48.853] └─────────────────────────────────────────────────────────┘
+[23:19:49.720]   ▲ Next.js 14.2.5
+[23:19:49.722] 
+[23:19:49.782]    Creating an optimized production build ...
+[23:19:50.357]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:19:56.394]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:19:57.350]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:20:03.592]  ✓ Compiled successfully
+[23:20:03.594]    Linting and checking validity of types ...
+[23:20:10.192] Failed to compile.
+[23:20:10.192] 
+[23:20:10.193] ./app/page.tsx:20:10
+[23:20:10.193] Type error: Module '"@/types"' has no exported member 'ProductCardData'.
+[23:20:10.193] 
+[23:20:10.194] [0m [90m 18 |[39m [36mimport[39m [33mProductCard[39m [36mfrom[39m [32m'@/components/ProductCard'[39m[0m
+[23:20:10.194] [0m [90m 19 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'@/lib/utils'[39m[0m
+[23:20:10.194] [0m[31m[1m>[22m[39m[90m 20 |[39m [36mimport[39m { [33mProductCardData[39m } [36mfrom[39m [32m'@/types'[39m[0m
+[23:20:10.194] [0m [90m    |[39m          [31m[1m^[22m[39m[0m
+[23:20:10.194] [0m [90m 21 |[39m[0m
+[23:20:10.194] [0m [90m 22 |[39m [90m// Mock данные для демонстрации[39m[0m
+[23:20:10.194] [0m [90m 23 |[39m [36mconst[39m featuredProducts[33m:[39m [33mProductCardData[39m[] [33m=[39m [[0m
+[23:20:10.243] Error: Command "npm run vercel-build" exited with 1
+[23:20:10.539] 
+[23:20:13.591] Exiting build container

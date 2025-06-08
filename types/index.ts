@@ -95,6 +95,28 @@ export interface Product {
   crossSellProducts?: Product[]
 }
 
+// Упрощенный тип для карточки товара
+export interface ProductCardData {
+  id: string
+  name: string
+  slug: string
+  price: number
+  originalPrice?: number | null
+  discount?: number
+  inStock: boolean
+  isNew?: boolean
+  isHot?: boolean
+  averageRating?: number
+  totalReviews?: number
+  images?: Array<{
+    url: string
+    alt: string
+  }>
+  category?: {
+    name: string
+  }
+}
+
 export interface ProductImage {
   id: string
   productId: string
