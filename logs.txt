@@ -1,94 +1,71 @@
-[22:08:06.865] Running build in Washington, D.C., USA (East) – iad1
-[22:08:06.866] Build machine configuration: 2 cores, 8 GB
-[22:08:06.881] Cloning github.com/Tauimi/next (Branch: main, Commit: 9aa0de9)
-[22:08:07.184] Cloning completed: 303.000ms
-[22:08:08.958] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
-[22:08:09.476] Running "vercel build"
-[22:08:10.054] Vercel CLI 42.2.0
-[22:08:10.329] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
-[22:08:10.338] Installing dependencies...
-[22:08:11.769] 
-[22:08:11.769] > technomart@1.0.0 postinstall
-[22:08:11.770] > prisma generate --no-engine
-[22:08:11.770] 
-[22:08:12.254] Prisma schema loaded from prisma/schema.prisma
-[22:08:13.016] 
-[22:08:13.017] ✔ Generated Prisma Client (v5.22.0, engine=none) to ./node_modules/@prisma/client in 359ms
-[22:08:13.018] 
-[22:08:13.018] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[22:08:13.018] 
-[22:08:13.019] Tip: Want real-time updates to your database without manual polling? Discover how with Pulse: https://pris.ly/tip-0-pulse
-[22:08:13.019] 
-[22:08:13.214] 
-[22:08:13.215] up to date in 3s
-[22:08:13.244] Detected Next.js version: 14.2.5
-[22:08:13.250] Running "npm run build"
-[22:08:13.371] 
-[22:08:13.372] > technomart@1.0.0 build
-[22:08:13.372] > prisma generate --no-engine && next build
-[22:08:13.372] 
-[22:08:13.709] Prisma schema loaded from prisma/schema.prisma
-[22:08:14.414] 
-[22:08:14.414] ✔ Generated Prisma Client (v5.22.0, engine=none) to ./node_modules/@prisma/client in 352ms
-[22:08:14.414] 
-[22:08:14.415] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[22:08:14.415] 
-[22:08:14.415] Tip: Want to react to database changes in your app as they happen? Discover how with Pulse: https://pris.ly/tip-1-pulse
-[22:08:14.415] 
-[22:08:14.455] ┌─────────────────────────────────────────────────────────┐
-[22:08:14.455] │  Update available 5.22.0 -> 6.9.0                       │
-[22:08:14.456] │                                                         │
-[22:08:14.456] │  This is a major update - please follow the guide at    │
-[22:08:14.456] │  https://pris.ly/d/major-version-upgrade                │
-[22:08:14.456] │                                                         │
-[22:08:14.456] │  Run the following to update                            │
-[22:08:14.456] │    npm i --save-dev prisma@latest                       │
-[22:08:14.456] │    npm i @prisma/client@latest                          │
-[22:08:14.456] └─────────────────────────────────────────────────────────┘
-[22:08:15.294]   ▲ Next.js 14.2.5
-[22:08:15.295] 
-[22:08:15.400] 
-[22:08:15.400] > Build error occurred
-[22:08:15.400] Error: You cannot use different slug names for the same dynamic path ('id' !== 'slug').
-[22:08:15.401]     at handleSlug (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:94:31)
-[22:08:15.401]     at UrlNode._insert (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:131:17)
-[22:08:15.401]     at UrlNode._insert (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:142:40)
-[22:08:15.401]     at UrlNode._insert (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:142:40)
-[22:08:15.401]     at UrlNode.insert (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:13:14)
-[22:08:15.401]     at /vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:165:46
-[22:08:15.401]     at Array.forEach (<anonymous>)
-[22:08:15.401]     at getSortedRoutes (/vercel/path0/node_modules/next/dist/shared/lib/router/utils/sorted-routes.js:165:21)
-[22:08:15.401]     at /vercel/path0/node_modules/next/dist/build/index.js:623:65
-[22:08:15.402]     at Span.traceFn (/vercel/path0/node_modules/next/dist/trace/trace.js:147:20)
-[22:08:15.426] Error: Command "npm run build" exited with 1
-[22:08:15.695] 
-[22:08:18.665] Exiting build container
-
-============================================================
-           ЛОГИ ОШИБОК ДЕПЛОЯ TECHNOMART
-============================================================
-
-ИНСТРУКЦИЯ:
-1. Скопируйте ошибки из Vercel Dashboard сюда
-2. Включите полный стек трейс ошибки
-3. Укажите время и стадию деплоя
-
-ФОРМАТ:
-=== [ДАТА/ВРЕМЯ] ===
-Стадия: [build/runtime/database]
-Ошибка: [текст ошибки]
-Стек: [полный стек трейс]
-
-ПРИМЕР:
-=== [2024-01-15 14:30] ===
-Стадия: build
-Ошибка: Module not found: Can't resolve '@/components/ui/Button'
-Стек: 
-  at resolveModule (webpack:/...)
-  at /app/components/ProductCard.tsx:7:0
-
-============================================================
-           АКТУАЛЬНЫЕ ЛОГИ ОШИБОК
-============================================================
-
-(Вставьте ваши ошибки ниже этой строки)
+[22:44:07.776] Running build in Washington, D.C., USA (East) – iad1
+[22:44:07.786] Build machine configuration: 2 cores, 8 GB
+[22:44:07.849] Cloning github.com/Tauimi/next (Branch: main, Commit: f7a7469)
+[22:44:08.632] Cloning completed: 783.000ms
+[22:44:09.694] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
+[22:44:10.570] Running "vercel build"
+[22:44:11.010] Vercel CLI 42.2.0
+[22:44:11.279] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+[22:44:11.288] Installing dependencies...
+[22:44:13.049] 
+[22:44:13.050] > technomart@1.0.0 postinstall
+[22:44:13.050] > prisma generate
+[22:44:13.050] 
+[22:44:13.521] Prisma schema loaded from prisma/schema.prisma
+[22:44:14.341] 
+[22:44:14.342] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 414ms
+[22:44:14.342] 
+[22:44:14.342] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[22:44:14.342] 
+[22:44:14.342] Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+[22:44:14.342] 
+[22:44:14.537] 
+[22:44:14.538] up to date in 3s
+[22:44:14.568] Detected Next.js version: 14.2.5
+[22:44:14.573] Running "npm run vercel-build"
+[22:44:14.697] 
+[22:44:14.700] > technomart@1.0.0 vercel-build
+[22:44:14.700] > prisma generate && next build
+[22:44:14.701] 
+[22:44:15.063] Prisma schema loaded from prisma/schema.prisma
+[22:44:15.762] 
+[22:44:15.762] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 372ms
+[22:44:15.762] 
+[22:44:15.762] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[22:44:15.762] 
+[22:44:15.762] Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+[22:44:15.762] 
+[22:44:15.805] ┌─────────────────────────────────────────────────────────┐
+[22:44:15.806] │  Update available 5.22.0 -> 6.9.0                       │
+[22:44:15.806] │                                                         │
+[22:44:15.806] │  This is a major update - please follow the guide at    │
+[22:44:15.806] │  https://pris.ly/d/major-version-upgrade                │
+[22:44:15.807] │                                                         │
+[22:44:15.807] │  Run the following to update                            │
+[22:44:15.807] │    npm i --save-dev prisma@latest                       │
+[22:44:15.807] │    npm i @prisma/client@latest                          │
+[22:44:15.807] └─────────────────────────────────────────────────────────┘
+[22:44:16.663]   ▲ Next.js 14.2.5
+[22:44:16.664] 
+[22:44:16.733]    Creating an optimized production build ...
+[22:44:17.294]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[22:44:22.766]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[22:44:23.719]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[22:44:29.994]  ✓ Compiled successfully
+[22:44:29.996]    Linting and checking validity of types ...
+[22:44:37.315] Failed to compile.
+[22:44:37.315] 
+[22:44:37.316] ./app/api/auth/login/route.ts:27:36
+[22:44:37.316] Type error: This expression is not callable.
+[22:44:37.316]   Each member of the union type '(<T_5, A_5>(this: T_5, args: Exact<A_5, Args<T_5, "findUnique"> & PrismaCacheStrategy>) => AcceleratePromise<Result<T_5, A_5, "findUnique"> | null>) | (<T extends UserFindUniqueArgs>(args: SelectSubset<...>) => Prisma__UserClient<...>)' has signatures, but none of those signatures are compatible with each other.
+[22:44:37.316] 
+[22:44:37.316] [0m [90m 25 |[39m[0m
+[22:44:37.316] [0m [90m 26 |[39m     [90m// Поиск пользователя[39m[0m
+[22:44:37.316] [0m[31m[1m>[22m[39m[90m 27 |[39m     [36mconst[39m user [33m=[39m [36mawait[39m prisma[33m.[39muser[33m.[39mfindUnique({[0m
+[22:44:37.317] [0m [90m    |[39m                                    [31m[1m^[22m[39m[0m
+[22:44:37.317] [0m [90m 28 |[39m       where[33m:[39m { email[33m:[39m email[33m.[39mtoLowerCase() }[0m
+[22:44:37.317] [0m [90m 29 |[39m     })[0m
+[22:44:37.317] [0m [90m 30 |[39m[0m
+[22:44:37.365] Error: Command "npm run vercel-build" exited with 1
+[22:44:37.662] 
+[22:44:41.262] Exiting build container

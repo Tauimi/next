@@ -25,7 +25,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@prisma/client": "^5.7.1",
-    "@prisma/extension-accelerate": "^1.0.0",
     "next-auth": "^4.24.5",
     "bcryptjs": "^2.4.3",
     "react-hook-form": "^7.48.2",
