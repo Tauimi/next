@@ -1,70 +1,97 @@
-[23:19:40.704] Running build in Washington, D.C., USA (East) – iad1
-[23:19:40.705] Build machine configuration: 2 cores, 8 GB
-[23:19:40.722] Cloning github.com/Tauimi/next (Branch: main, Commit: 51b4cde)
-[23:19:41.148] Cloning completed: 425.000ms
-[23:19:42.927] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
-[23:19:43.455] Running "vercel build"
-[23:19:43.968] Vercel CLI 42.2.0
-[23:19:44.303] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
-[23:19:44.312] Installing dependencies...
-[23:19:46.123] 
-[23:19:46.124] > technomart@1.0.0 postinstall
-[23:19:46.124] > prisma generate
-[23:19:46.124] 
-[23:19:46.574] Prisma schema loaded from prisma/schema.prisma
-[23:19:47.373] 
-[23:19:47.374] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 396ms
-[23:19:47.374] 
-[23:19:47.375] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[23:19:47.375] 
-[23:19:47.375] Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
-[23:19:47.375] 
-[23:19:47.568] 
-[23:19:47.569] up to date in 3s
-[23:19:47.600] Detected Next.js version: 14.2.5
-[23:19:47.605] Running "npm run vercel-build"
-[23:19:47.722] 
-[23:19:47.722] > technomart@1.0.0 vercel-build
-[23:19:47.725] > prisma generate && next build
-[23:19:47.725] 
-[23:19:48.075] Prisma schema loaded from prisma/schema.prisma
-[23:19:48.812] 
-[23:19:48.813] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 353ms
-[23:19:48.813] 
-[23:19:48.813] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
-[23:19:48.814] 
-[23:19:48.814] Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
-[23:19:48.814] 
-[23:19:48.850] ┌─────────────────────────────────────────────────────────┐
-[23:19:48.851] │  Update available 5.22.0 -> 6.9.0                       │
-[23:19:48.851] │                                                         │
-[23:19:48.851] │  This is a major update - please follow the guide at    │
-[23:19:48.852] │  https://pris.ly/d/major-version-upgrade                │
-[23:19:48.852] │                                                         │
-[23:19:48.852] │  Run the following to update                            │
-[23:19:48.852] │    npm i --save-dev prisma@latest                       │
-[23:19:48.853] │    npm i @prisma/client@latest                          │
-[23:19:48.853] └─────────────────────────────────────────────────────────┘
-[23:19:49.720]   ▲ Next.js 14.2.5
-[23:19:49.722] 
-[23:19:49.782]    Creating an optimized production build ...
-[23:19:50.357]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[23:19:56.394]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[23:19:57.350]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
-[23:20:03.592]  ✓ Compiled successfully
-[23:20:03.594]    Linting and checking validity of types ...
-[23:20:10.192] Failed to compile.
-[23:20:10.192] 
-[23:20:10.193] ./app/page.tsx:20:10
-[23:20:10.193] Type error: Module '"@/types"' has no exported member 'ProductCardData'.
-[23:20:10.193] 
-[23:20:10.194] [0m [90m 18 |[39m [36mimport[39m [33mProductCard[39m [36mfrom[39m [32m'@/components/ProductCard'[39m[0m
-[23:20:10.194] [0m [90m 19 |[39m [36mimport[39m { formatDate } [36mfrom[39m [32m'@/lib/utils'[39m[0m
-[23:20:10.194] [0m[31m[1m>[22m[39m[90m 20 |[39m [36mimport[39m { [33mProductCardData[39m } [36mfrom[39m [32m'@/types'[39m[0m
-[23:20:10.194] [0m [90m    |[39m          [31m[1m^[22m[39m[0m
-[23:20:10.194] [0m [90m 21 |[39m[0m
-[23:20:10.194] [0m [90m 22 |[39m [90m// Mock данные для демонстрации[39m[0m
-[23:20:10.194] [0m [90m 23 |[39m [36mconst[39m featuredProducts[33m:[39m [33mProductCardData[39m[] [33m=[39m [[0m
-[23:20:10.243] Error: Command "npm run vercel-build" exited with 1
-[23:20:10.539] 
-[23:20:13.591] Exiting build container
+[23:31:43.500] Running build in Washington, D.C., USA (East) – iad1
+[23:31:43.500] Build machine configuration: 2 cores, 8 GB
+[23:31:43.515] Cloning github.com/Tauimi/next (Branch: main, Commit: a83c8c6)
+[23:31:43.794] Cloning completed: 279.000ms
+[23:31:45.288] Restored build cache from previous deployment (FfNNcifVXTcSmfLYvSCX3MCYsvaa)
+[23:31:45.819] Running "vercel build"
+[23:31:46.251] Vercel CLI 42.2.0
+[23:31:46.749] Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+[23:31:46.757] Installing dependencies...
+[23:31:48.522] 
+[23:31:48.523] > technomart@1.0.0 postinstall
+[23:31:48.523] > prisma generate
+[23:31:48.523] 
+[23:31:48.983] Prisma schema loaded from prisma/schema.prisma
+[23:31:49.815] 
+[23:31:49.816] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 420ms
+[23:31:49.816] 
+[23:31:49.816] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[23:31:49.816] 
+[23:31:49.816] Tip: Want to react to database changes in your app as they happen? Discover how with Pulse: https://pris.ly/tip-1-pulse
+[23:31:49.816] 
+[23:31:50.011] 
+[23:31:50.011] up to date in 3s
+[23:31:50.045] Detected Next.js version: 14.2.5
+[23:31:50.052] Running "npm run vercel-build"
+[23:31:50.170] 
+[23:31:50.170] > technomart@1.0.0 vercel-build
+[23:31:50.174] > prisma generate && next build
+[23:31:50.174] 
+[23:31:50.531] Prisma schema loaded from prisma/schema.prisma
+[23:31:51.252] 
+[23:31:51.253] ✔ Generated Prisma Client (v5.22.0) to ./node_modules/@prisma/client in 369ms
+[23:31:51.253] 
+[23:31:51.253] Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+[23:31:51.253] 
+[23:31:51.253] Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
+[23:31:51.253] 
+[23:31:51.288] ┌─────────────────────────────────────────────────────────┐
+[23:31:51.289] │  Update available 5.22.0 -> 6.9.0                       │
+[23:31:51.289] │                                                         │
+[23:31:51.289] │  This is a major update - please follow the guide at    │
+[23:31:51.289] │  https://pris.ly/d/major-version-upgrade                │
+[23:31:51.289] │                                                         │
+[23:31:51.289] │  Run the following to update                            │
+[23:31:51.289] │    npm i --save-dev prisma@latest                       │
+[23:31:51.289] │    npm i @prisma/client@latest                          │
+[23:31:51.290] └─────────────────────────────────────────────────────────┘
+[23:31:52.145]   ▲ Next.js 14.2.5
+[23:31:52.145] 
+[23:31:52.205]    Creating an optimized production build ...
+[23:31:52.788]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:31:58.780]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:31:59.781]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:32:06.327]  ✓ Compiled successfully
+[23:32:06.329]    Linting and checking validity of types ...
+[23:32:13.013]    Collecting page data ...
+[23:32:13.456] prisma:warn In production, we recommend using `prisma generate --no-engine` (See: `prisma generate --help`)
+[23:32:13.564]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[23:32:14.620]    Generating static pages (0/19) ...
+[23:32:14.915]    Generating static pages (4/19) 
+[23:32:14.995]    Generating static pages (9/19) 
+[23:32:15.012] Ошибка поиска: q [Error]: Dynamic server usage: Route /api/search couldn't be rendered statically because it used `request.url`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+[23:32:15.012]     at W (/vercel/path0/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:21106)
+[23:32:15.012]     at Object.get (/vercel/path0/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:28459)
+[23:32:15.013]     at u (/vercel/path0/.next/server/app/api/search/route.js:1:544)
+[23:32:15.013]     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:36264
+[23:32:15.013]     at /vercel/path0/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+[23:32:15.013]     at NoopContextManager.with (/vercel/path0/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+[23:32:15.013]     at ContextAPI.with (/vercel/path0/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+[23:32:15.013]     at NoopTracer.startActiveSpan (/vercel/path0/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+[23:32:15.013]     at ProxyTracer.startActiveSpan (/vercel/path0/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854)
+[23:32:15.014]     at /vercel/path0/node_modules/next/dist/server/lib/trace/tracer.js:122:103 {
+[23:32:15.014]   description: "Route /api/search couldn't be rendered statically because it used `request.url`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+[23:32:15.014]   digest: 'DYNAMIC_SERVER_USAGE'
+[23:32:15.014] }
+[23:32:15.330]    Generating static pages (14/19) 
+[23:32:15.955]  ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/search". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+[23:32:15.955]     at o (/vercel/path0/.next/server/chunks/677.js:1:10901)
+[23:32:15.956]     at s (/vercel/path0/.next/server/chunks/677.js:1:21851)
+[23:32:15.956]     at d (/vercel/path0/.next/server/app/search/page.js:1:1996)
+[23:32:15.956]     at nj (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46251)
+[23:32:15.956]     at nM (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47571)
+[23:32:15.956]     at nN (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64546)
+[23:32:15.956]     at nI (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47010)
+[23:32:15.956]     at nM (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47717)
+[23:32:15.956]     at nM (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61546)
+[23:32:15.956]     at nN (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64546)
+[23:32:15.957] 
+[23:32:15.957] Error occurred prerendering page "/search". Read more: https://nextjs.org/docs/messages/prerender-error
+[23:32:15.957] 
+[23:32:15.958]  ✓ Generating static pages (19/19)
+[23:32:15.969] 
+[23:32:15.969] > Export encountered errors on following paths:
+[23:32:15.970] 	/search/page: /search
+[23:32:16.000] Error: Command "npm run vercel-build" exited with 1
+[23:32:16.288] 
+[23:32:19.622] Exiting build container
