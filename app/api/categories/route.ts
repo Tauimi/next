@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
       where: onlyActive ? { isActive: true } : {},
       orderBy: { sortOrder: 'asc' },
       include: {
-        subcategories: {
+        children: {
           where: onlyActive ? { isActive: true } : {},
           orderBy: { sortOrder: 'asc' },
           include: includeProducts ? {
@@ -75,12 +75,10 @@ export async function POST(request: NextRequest) {
     const {
       name,
       description,
-      parentCategoryId,
+      parentId,
       sortOrder = 0,
       isActive = true,
-      icon,
-      metaTitle,
-      metaDescription,
+      image,
     } = body
 
     // Валидация обязательных полей
@@ -112,15 +110,13 @@ export async function POST(request: NextRequest) {
         name,
         slug,
         description,
-        parentCategoryId,
+        parentId,
         sortOrder: parseInt(sortOrder),
         isActive,
-        icon,
-        metaTitle: metaTitle || name,
-        metaDescription: metaDescription || description,
+        image,
       },
       include: {
-        subcategories: true,
+        children: true,
         _count: {
           select: {
             products: true

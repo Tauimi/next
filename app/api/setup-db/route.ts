@@ -72,11 +72,9 @@ export async function POST() {
           name: 'Смартфоны',
           slug: 'smartphones',
           description: 'Современные смартфоны от ведущих производителей',
-          icon: '📱',
+          image: '/categories/smartphones.jpg',
           sortOrder: 1,
-          isActive: true,
-          metaTitle: 'Смартфоны - купить в TechnoMart',
-          metaDescription: 'Широкий выбор смартфонов с доставкой. Низкие цены, гарантия качества.'
+          isActive: true
         }
       }),
       prisma.category.create({
@@ -84,11 +82,9 @@ export async function POST() {
           name: 'Ноутбуки',
           slug: 'laptops',
           description: 'Ноутбуки для работы, учебы и развлечений',
-          icon: '💻',
+          image: '/categories/laptops.jpg',
           sortOrder: 2,
-          isActive: true,
-          metaTitle: 'Ноутбуки - купить в TechnoMart',
-          metaDescription: 'Ноутбуки всех брендов с доставкой. Консультации экспертов.'
+          isActive: true
         }
       }),
       prisma.category.create({
@@ -96,11 +92,9 @@ export async function POST() {
           name: 'Телевизоры',
           slug: 'tvs',
           description: 'Телевизоры с высоким качеством изображения',
-          icon: '📺',
+          image: '/categories/tvs.jpg',
           sortOrder: 3,
-          isActive: true,
-          metaTitle: 'Телевизоры - купить в TechnoMart',
-          metaDescription: 'Smart TV, QLED, OLED телевизоры с доставкой и установкой.'
+          isActive: true
         }
       })
     ])
@@ -114,9 +108,7 @@ export async function POST() {
           description: 'Американская технологическая компания',
           logo: '/brands/apple.svg',
           website: 'https://apple.com',
-          isActive: true,
-          metaTitle: 'Apple - официальные товары в TechnoMart',
-          metaDescription: 'Оригинальная продукция Apple с гарантией и доставкой.'
+          isActive: true
         }
       }),
       prisma.brand.create({
@@ -126,9 +118,7 @@ export async function POST() {
           description: 'Южнокорейская технологическая компания',
           logo: '/brands/samsung.svg',
           website: 'https://samsung.com',
-          isActive: true,
-          metaTitle: 'Samsung - официальные товары в TechnoMart',
-          metaDescription: 'Продукция Samsung с официальной гарантией.'
+          isActive: true
         }
       }),
       prisma.brand.create({
@@ -138,9 +128,7 @@ export async function POST() {
           description: 'Японская технологическая корпорация',
           logo: '/brands/sony.svg',
           website: 'https://sony.com',
-          isActive: true,
-          metaTitle: 'Sony - официальные товары в TechnoMart',
-          metaDescription: 'Электроника Sony с гарантией качества.'
+          isActive: true
         }
       })
     ])
@@ -167,7 +155,7 @@ export async function POST() {
           isNew: true,
           isHot: true,
           averageRating: 4.8,
-          reviewCount: 156,
+          totalReviews: 156,
           metaTitle: 'iPhone 15 Pro - купить в TechnoMart',
           metaDescription: 'iPhone 15 Pro с A17 Pro. Лучшая цена, официальная гарантия, быстрая доставка.',
           keywords: ['iPhone', '15', 'Pro', 'Apple', 'смартфон']
@@ -193,7 +181,7 @@ export async function POST() {
           isNew: false,
           isHot: true,
           averageRating: 4.9,
-          reviewCount: 89,
+          totalReviews: 89,
           metaTitle: 'MacBook Air M2 - купить в TechnoMart',
           metaDescription: 'MacBook Air с M2 чипом. Официальная гарантия Apple, выгодные цены.',
           keywords: ['MacBook', 'Air', 'M2', 'Apple', 'ноутбук']
@@ -219,7 +207,7 @@ export async function POST() {
           isNew: false,
           isHot: false,
           averageRating: 4.7,
-          reviewCount: 67,
+          totalReviews: 67,
           metaTitle: 'Samsung QLED 65" QN90B - купить в TechnoMart',
           metaDescription: 'Samsung QLED телевизор 65 дюймов. 4K, Smart TV, доставка и установка.',
           keywords: ['Samsung', 'QLED', '65', 'телевизор', '4K']
