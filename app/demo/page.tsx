@@ -112,7 +112,7 @@ export default function DemoPage() {
           {/* Быстрые ссылки */}
           <div className="border-t pt-6">
             <h3 className="text-lg font-semibold mb-4">Быстрые ссылки:</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               <Button variant="outline" size="sm" asChild>
                 <Link href="/catalog">Каталог</Link>
               </Button>
@@ -125,11 +125,30 @@ export default function DemoPage() {
               <Button variant="outline" size="sm" asChild>
                 <Link href="/admin">Админ-панель</Link>
               </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/api/test" target="_blank">API тест</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Диагностика */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-8">
+            <h4 className="font-semibold text-yellow-800 mb-2">
+              🔧 Диагностика проблем:
+            </h4>
+            <div className="text-sm text-yellow-700 space-y-2">
+              <p><strong>Ошибка подключения к серверу?</strong></p>
+              <ul className="list-disc ml-5 space-y-1">
+                <li>Проверьте: <code className="bg-yellow-200 px-1 rounded">/api/test</code> - должен показать статус API</li>
+                <li>Убедитесь что NEXTAUTH_URL указывает на ваш домен Vercel</li>
+                <li>Проверьте логи в Vercel Dashboard → Functions</li>
+                <li>Все переменные окружения должны быть настроены</li>
+              </ul>
             </div>
           </div>
 
           {/* Техническая информация */}
-          <div className="bg-secondary-100 rounded-lg p-4 mt-8">
+          <div className="bg-secondary-100 rounded-lg p-4 mt-4">
             <h4 className="font-semibold text-secondary-800 mb-2">
               Техническая информация:
             </h4>

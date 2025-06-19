@@ -3,10 +3,17 @@ import { prisma } from '@/lib/prisma'
 import { verifyPassword, createToken } from '@/lib/auth'
 import { isValidEmail } from '@/lib/utils'
 
+// Указываем что роут должен быть динамическим
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
+  console.log('Login API called')
+  
   try {
     const body = await request.json()
     const { email, password } = body
+    
+    console.log('Login attempt for:', email)
 
     // Валидация входных данных
     if (!email || !password) {
@@ -32,9 +39,11 @@ export async function POST(request: NextRequest) {
       })
     } catch (dbError) {
       console.log('База данных недоступна для авторизации, используем fallback пользователя:', dbError)
+      console.log('Попытка fallback авторизации для:', email.toLowerCase())
       
       // Fallback авторизация для демонстрации
       if (email.toLowerCase() === 'admin@technomart.ru' && password === 'Admin123!') {
+        console.log('Fallback: авторизация администратора')
         user = {
           id: 'fallback-admin',
           email: 'admin@technomart.ru',
@@ -47,6 +56,7 @@ export async function POST(request: NextRequest) {
           createdAt: new Date(),
         }
       } else if (email.toLowerCase() === 'user@technomart.ru' && password === 'User123!') {
+        console.log('Fallback: авторизация пользователя')
         user = {
           id: 'fallback-user',
           email: 'user@technomart.ru',
@@ -58,6 +68,8 @@ export async function POST(request: NextRequest) {
           isActive: true,
           createdAt: new Date(),
         }
+      } else {
+        console.log('Fallback: неверные учетные данные')
       }
     }
 
@@ -137,8 +149,18 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Login error:', error)
+    
+    // Детализированное логирование для диагностики
+    if (error instanceof Error) {
+      console.error('Error message:', error.message)
+      console.error('Error stack:', error.stack)
+    }
+    
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Internal server error',
+        details: process.env.NODE_ENV === 'development' ? error instanceof Error ? error.message : 'Unknown error' : undefined
+      },
       { status: 500 }
     )
   }
