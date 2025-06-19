@@ -96,6 +96,10 @@ export default function Header() {
             <Link href="/admin" className="text-secondary-500 hover:text-primary-600 transition-colors text-sm">
               Админ-панель
             </Link>
+            <span className="text-secondary-500">|</span>
+            <Link href="/demo" className="text-accent-600 hover:text-accent-700 transition-colors text-sm font-medium">
+              Демо режим
+            </Link>
             <Link 
               href="tel:+78001234567" 
               className="flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors"
