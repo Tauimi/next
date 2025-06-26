@@ -2,25 +2,40 @@
 
 ## 📋 Шаг 1: Создайте базу данных
 
-### Вариант А: Prisma Cloud (рекомендуется)
+### Вариант А: Vercel Postgres (рекомендуется)
+1. Откройте: https://vercel.com/dashboard
+2. Выберите/создайте ваш проект
+3. Перейдите в **Storage** → **Create Database** → **Postgres**
+4. Название: `technomart-db`, выберите регион
+5. **Важно:** Скопируйте все переменные окружения из вкладки `.env.local`
+
+### Вариант Б: Prisma Cloud
 1. Перейдите на: https://console.prisma.io/
 2. Создайте новый проект с PostgreSQL базой данных
 3. Скопируйте строку подключения (DATABASE_URL)
-
-### Вариант Б: Vercel Postgres
-1. В проекте Vercel перейдите в Storage → Create → Postgres
-2. Скопируйте переменные окружения
 
 ## 📋 Шаг 2: Настройте окружение
 
 Создайте файл `.env.local`:
 
+**Для Vercel Postgres** (скопируйте переменные из Vercel Dashboard):
 ```env
-# Замените на вашу строку подключения
-DATABASE_URL="postgresql://username:password@host:5432/database"
+# Vercel Postgres (скопируйте из Dashboard → Storage → ваша БД → .env.local)
+POSTGRES_URL="postgres://..."
+POSTGRES_PRISMA_URL="postgres://..."
+POSTGRES_URL_NON_POOLING="postgres://..."
+DATABASE_URL="postgres://..." # Используйте значение POSTGRES_PRISMA_URL
 
-# Сгенерируйте случайную строку 32+ символов
-NEXTAUTH_SECRET="your-random-secret-key-32-chars-minimum"
+# Authentication
+NEXTAUTH_SECRET="your-random-secret-32-chars-minimum"
+NEXTAUTH_URL="http://localhost:3000"
+```
+
+**Для других провайдеров:**
+```env
+# Обычная строка подключения
+DATABASE_URL="postgresql://username:password@host:5432/database"
+NEXTAUTH_SECRET="your-random-secret-32-chars-minimum"
 NEXTAUTH_URL="http://localhost:3000"
 ```
 
